@@ -17,7 +17,7 @@ const StartupForm = () => {
   const [pitch, setPitch] = useState('')
   const router = useRouter()
 
-  const handleFormSubmit = async (prevState: any, formData: FormData) => {
+  const handleFormSubmit = async (formData: FormData) => {
     try {
       const formValues = {
         title: formData.get('title') as string,
@@ -58,10 +58,12 @@ const StartupForm = () => {
       }
     }
   }
-  const [state, formAction, isPending] = useActionState(handleFormSubmit, {
+
+  const [, formAction, isPending] = useActionState(handleFormSubmit, {
     error: '',
     status: 'INITIAL',
   })
+
   return (
     <form action={formAction} className='startup-form'>
       <div>
@@ -163,5 +165,4 @@ const StartupForm = () => {
     </form>
   )
 }
-
 export default StartupForm

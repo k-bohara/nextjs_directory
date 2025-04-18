@@ -6,7 +6,7 @@ import { writeClient } from '@/sanity/lib/writeClient'
 import slugify from 'slugify'
 
 export const createPitch = async (
-  state: any,
+  // state: any,
   form: FormData,
   pitch: string
 ) => {
