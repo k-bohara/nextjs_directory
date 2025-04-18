@@ -1,0 +1,8 @@
+# Fix 1: Fix the GROQ query syntax error in queries.ts
+# Current issue: Malformed query syntax with unbalanced brackets
+
+# Fix 2: Fix the syntax error in startup/[id]/page.tsx
+# Current issue: Invalid syntax in the client.fetch() call - incorrect params object syntax
+
+# Fix 3: Fix the name reference in StartupCard.tsx
+# Current issue: The "name" variable was referenced directly but should be author?.name
